@@ -1,0 +1,106 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+/* line 5, _reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, _reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, _reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, _reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, _reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, _reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, _reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, _extras.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 3, styles.scss */
+h1:before {
+  position: absolute;
+  content: "";
+  display: block;
+  right: 20px;
+  top: 100%;
+  width: 0px;
+  height: 0px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #303030 transparent transparent transparent;
+}
+
+/* line 17, styles.scss */
+h1 {
+  position: relative;
+  width: 30%;
+  height: 100px;
+  background-color: #303030;
+  border-radius: 30px;
+}
+
+/* line 24, styles.scss */
+h1:after {
+  background-color: red;
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  margin-top: -10px;
+  margin-left: -10px;
+}

@@ -1,0 +1,36 @@
+@import "reset", "extras";
+
+h1:before{
+	position: absolute;
+	content: "" ;
+	display: block;
+	right: 20px;
+	
+	top: 100%;
+	width: 0px;
+	height: 0px;
+	border-width: 20px;
+	border-style: solid;
+	border-color: #303030 transparent transparent transparent;
+}
+
+h1{
+	position: relative;
+	width: 30%;
+	height: 100px;
+	background-color: #303030;
+	border-radius: 30px;
+}
+h1:after{
+	background-color: hsl(77, 1000%, 50%);
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 30px;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	margin-top: -10px;
+	margin-left: -10px;
+}

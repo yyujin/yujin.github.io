@@ -1,1 +1,132 @@
-style.css
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+/* line 5, style.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, style.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, style.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, style.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 48, style.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: block;
+  background-color: red;
+}
+
+/**/
+/* line 59, style.scss */
+body {
+  background-color: violet;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+}
+
+/* line 64, style.scss */
+header {
+  background-color: #eac0fc;
+  overflow: hidden;
+}
+/* line 67, style.scss */
+header img {
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px;
+  display: block;
+  background-color: white;
+  border-radius: 3px;
+}
+/* line 75, style.scss */
+header ul {
+  padding: 10px;
+}
+/* line 78, style.scss */
+header li {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+/* line 84, style.scss */
+header a {
+  text-decoration: none;
+  color: #c95ef7;
+}
+/* line 87, style.scss */
+header a:hover {
+  color: #a30be5;
+}
+
+/* line 92, style.scss */
+#hero {
+  height: 200px;
+  background-image: url(../img/sky.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* line 99, style.scss */
+main img {
+  width: 25%;
+  float: left;
+}
+/* line 103, style.scss */
+main article {
+  width: 75%;
+  float: right;
+}

@@ -1,0 +1,164 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+/* line 5, styles.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, styles.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, styles.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, styles.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, styles.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, styles.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, styles.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 48, styles.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: block;
+  background-color: red;
+}
+
+/* line 59, styles.scss */
+.container {
+  background-color: #FFFFFF;
+  height: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* line 65, styles.scss */
+header {
+  background-color: #ADD8E6;
+}
+/* line 67, styles.scss */
+header h1 {
+  text-align: center;
+  font-size: 32px;
+  font-style: bold;
+  color: #FFFFFF;
+  padding: 5px;
+  margin: 0 5 5 5px;
+}
+/* line 76, styles.scss */
+header img {
+  width: 100%;
+  height: 25%;
+  /*background-image: url(img\header.jpg);
+  background-repeat: repeat-y;*/
+}
+
+/* line 84, styles.scss */
+nav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #ADD8E6;
+  height: 30px;
+  margin: 0 auto;
+}
+/* line 90, styles.scss */
+nav ul {
+  padding: 10px;
+}
+/* line 93, styles.scss */
+nav li {
+  display: inline-block;
+  width: 80%;
+  float: left;
+  text-align: center;
+}
+/* line 99, styles.scss */
+nav a {
+  text-decoration: none;
+  color: #105c57;
+  padding: 5%;
+  font-size: 18px;
+}
+/* line 105, styles.scss */
+nav a:hover {
+  color: #010505;
+}
+
+/* line 111, styles.scss */
+.lorem {
+  margin: 10px;
+}
+/* line 113, styles.scss */
+.lorem img {
+  float: right;
+  height: 20%;
+  width: 13%;
+  padding: 2px;
+  margin: 2px;
+}
+/* line 120, styles.scss */
+.lorem p {
+  width: 80%;
+  margin: 3px;
+  padding: 3px;
+  border: 2px solid black;
+  float: left;
+}
+
+/* line 130, styles.scss */
+footer {
+  font-size: 10px;
+  font-style: italic;
+  margin: 5px;
+  padding: 3px;
+  text-align: right;
+}
+/* line 131, styles.scss */
+footer img {
+  width: 100%;
+  height: 35%;
+}
