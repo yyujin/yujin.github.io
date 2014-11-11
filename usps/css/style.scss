@@ -1,63 +1,11 @@
-/**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
- html, body, div, span, applet, object, iframe,
- h1, h2, h3, h4, h5, h6, p, blockquote, pre,
- a, abbr, acronym, address, big, cite, code,
- del, dfn, em, img, ins, kbd, q, s, samp,
- small, strike, strong, sub, sup, tt, var,
- b, u, i, center,
- dl, dt, dd, ol, ul, li,
- fieldset, form, label, legend,
- table, caption, tbody, tfoot, thead, tr, th, td,
- article, aside, canvas, details, embed,
- figure, figcaption, footer, header, hgroup,
- menu, nav, output, ruby, section, summary,
- time, mark, audio, video {
- 	margin: 0;
- 	padding: 0;
- 	border: 0;
- 	font-size: 100%;
- 	font: inherit;
- 	vertical-align: baseline;
- }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-.clearfix:before,
-.clearfix:after{
-	content: " ";
-	clear: both;
-	display: block;
-	background-color: red;	
-}
-/**/
+@import "reset", "extras";
 
-$var: hsl(282, 91%, 87%);
-
+$var:#87CEFA;
+html{
+	background-color: #303030;
+}
 body{
-	background-color: violet;
+	background-color: #eaeaea;
 	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
 }
@@ -73,17 +21,20 @@ header{
 		border-radius: 3px;
 	}
 	ul{
-		padding: 10px;
+		
 	}
 	li{
 		display: inline-block;
 		width: 25%;
 		float: left;
 		text-align: center;
+		padding: 20px 10px;
 	}
 	a{
 		text-decoration: none;
 		color:darken($var,20%);
+		transition: color 500ms ease-in-out;
+
 		&:hover{
 			color: darken($var,40%);
 		}		
@@ -96,15 +47,103 @@ header{
 	background-attachment: fixed;
 }
 main{
+	height: 600px;
+	position: relative;
 	img{
 		width:25%;
-		float: left;
+		border-radius: 50%;
+		border: 10px solid grey;
+		box-shadow: 0 0 0 2px #888;
+		position: absolute;
+		left: 15%;
+		transition: left 500ms ease-in-out;
+		z-index: 1;
+		&:hover{
+			left:5%;
+			border-width: 20px;
+			box-shadow: 0 0 20px 5px #888;
+			z-index: 1;
+		}
 	}
 	article{
 		width:75%;
 		float: right;
+		background-color: white;
+		padding: 0 30px;
+		position: relative;
+		margin-bottom: 40px;
+		&:before{
+			content:" ";
+			display: block;
+			width: 100%;
+			height: 100px;
+			background-color: white;
+			position: absolute;
+			top:-100px;
+			left: 0;
+			background-image: url(../img/mail.png);
+			background-repeat: repeat-x;
+
+		}
+	}
+	h1{
+		font-size: 40px;
+		margin-bottom: 20px;
+		text-align: left;
+		transition: font-size 150ms ease-out;
+		&:hover{
+			font-size: 70px;
+		}
+	}
+	p{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	h2{
+		font-family: 'Cookie', cursive;
+
+		font-size: 30px;
+		text-align: right;
+	}
+	h2:before{
+		content: "-";
 	}
 }
 footer{
+	background-color: #303030;
+	padding: 40px 0;
+	color: white;
+}
 
+$myfont:garamond, "Times New Roman", serif;
+$fontsize:18px;
+$bgcolor:hsla(75, 50%, 50%, 1);
+$bgcomp: complement($bgcolor);
+.button-style{
+	font-size: $fontsize;
+	font-family: $myfont;
+	line-height: $fontsize*2;
+	border: 1px solid superdark(red, 20%);
+}
+@mixin border-radius($radius){
+	border-radius: $radius;
+}
+@function superdark($color, $perc){
+	$dark: darken($color, $perc);
+	@return $dark;
+}
+a{
+	@extend .button-style;
+	display: block;
+	width: 100px;	
+	background-color: $bgcolor;
+	color: white;
+	text-decoration: none;	
+	text-align: center;
+	//border-radius: 5px;
+	@include border-radius(20px);	
+	text-shadow: 1px 1px 2px $bgcomp;
+}
+li{
+	@extend .button-style;
 }

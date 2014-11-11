@@ -2,7 +2,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-/* line 5, style.scss */
+/* line 5, _reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,63 +25,73 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 26, style.scss */
+/* line 26, _reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 30, style.scss */
+/* line 30, _reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 33, style.scss */
+/* line 33, _reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 36, style.scss */
+/* line 36, _reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 39, style.scss */
+/* line 39, _reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 44, style.scss */
+/* line 44, _reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 48, style.scss */
+/* line 49, _reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1, _extras.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
-  clear: both;
   display: block;
-  background-color: red;
+  clear: both;
 }
 
-/**/
-/* line 59, style.scss */
+/* line 4, style.scss */
+html {
+  background-color: #303030;
+}
+
+/* line 7, style.scss */
 body {
-  background-color: violet;
+  background-color: #eaeaea;
   font-family: 'Roboto', sans-serif;
   font-size: 100%;
 }
 
-/* line 64, style.scss */
+/* line 12, style.scss */
 header {
-  background-color: #eac0fc;
+  background-color: lightskyblue;
   overflow: hidden;
 }
-/* line 67, style.scss */
+/* line 15, style.scss */
 header img {
   width: 250px;
   margin: 10px auto;
@@ -90,28 +100,27 @@ header img {
   background-color: white;
   border-radius: 3px;
 }
-/* line 75, style.scss */
-header ul {
-  padding: 10px;
-}
-/* line 78, style.scss */
+/* line 26, style.scss */
 header li {
   display: inline-block;
   width: 25%;
   float: left;
   text-align: center;
+  padding: 20px 10px;
 }
-/* line 84, style.scss */
+/* line 33, style.scss */
 header a {
   text-decoration: none;
-  color: #c95ef7;
+  color: #25a6f6;
+  -webkit-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
 }
-/* line 87, style.scss */
+/* line 38, style.scss */
 header a:hover {
-  color: #a30be5;
+  color: #076eae;
 }
 
-/* line 92, style.scss */
+/* line 43, style.scss */
 #hero {
   height: 200px;
   background-image: url(../img/sky.jpg);
@@ -120,13 +129,105 @@ header a:hover {
   background-attachment: fixed;
 }
 
-/* line 99, style.scss */
+/* line 49, style.scss */
+main {
+  height: 600px;
+  position: relative;
+}
+/* line 52, style.scss */
 main img {
   width: 25%;
-  float: left;
+  border-radius: 50%;
+  border: 10px solid grey;
+  -webkit-box-shadow: 0 0 0 2px #888;
+  box-shadow: 0 0 0 2px #888;
+  position: absolute;
+  left: 15%;
+  -webkit-transition: left 500ms ease-in-out;
+  transition: left 500ms ease-in-out;
+  z-index: 1;
 }
-/* line 103, style.scss */
+/* line 61, style.scss */
+main img:hover {
+  left: 5%;
+  border-width: 20px;
+  -webkit-box-shadow: 0 0 20px 5px #888;
+  box-shadow: 0 0 20px 5px #888;
+  z-index: 1;
+}
+/* line 68, style.scss */
 main article {
   width: 75%;
   float: right;
+  background-color: white;
+  padding: 0 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 75, style.scss */
+main article:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-image: url(../img/mail.png);
+  background-repeat: repeat-x;
+}
+/* line 89, style.scss */
+main h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  -webkit-transition: font-size 150ms ease-out;
+  transition: font-size 150ms ease-out;
+}
+/* line 94, style.scss */
+main h1:hover {
+  font-size: 70px;
+}
+/* line 98, style.scss */
+main p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* line 102, style.scss */
+main h2 {
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  text-align: right;
+}
+/* line 108, style.scss */
+main h2:before {
+  content: "-";
+}
+
+/* line 112, style.scss */
+footer {
+  background-color: #303030;
+  padding: 40px 0;
+  color: white;
+}
+
+/* line 122, style.scss */
+.button-style, a, li {
+  font-size: 18px;
+  font-family: garamond, "Times New Roman", serif;
+  line-height: 36px;
+  border: 1px solid superdark(red, 20%);
+}
+
+/* line 135, style.scss */
+a {
+  display: block;
+  width: 100px;
+  background-color: #9fbf40;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  text-shadow: 1px 1px 2px #6040bf;
 }
