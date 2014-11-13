@@ -1,0 +1,72 @@
+html{
+	background-color: white;
+}
+
+body h1{
+	//background-color: purple;
+	margin: 0 auto;
+
+}
+header{
+	background-color: #aaa;
+	text-align: center;
+}
+.hero{
+	height: 100px;
+	background-image: url(http://www.extremetech.com/wp-content/uploads/2013/09/340.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+main{
+	background-color: white;
+}
+footer{
+	background-color: #333;
+	color: white;
+}
+/*phone*/
+@media screen and (max-width: 768px){
+	body{
+	background-color: black;
+}
+	.hero{
+		background-attachment: scroll;
+	}
+	aside{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li:nth-child(odd){
+			background-color:cadetblue;
+		}
+	}
+}
+@media screen and (max-width: 992px){
+	body{
+	background-color: black;
+}
+	.hero{	
+		background-attachment: scroll;
+	}
+	aside{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li:nth-child(odd){
+			background-color:cadetblue;
+		}
+	}
+}
+/*smartphone orientation
+@media handheld and (orientation:landscape){
+	body{
+		background-color: yellow;
+	}
+}
+
+
+65/35 pure: 8/4 bs*/
